@@ -1,0 +1,85 @@
+/* Container Styling */
+.date-picker-wrapper {
+    display: flex;
+    flex-direction: column;
+    background-color: #2f5c98;
+    /* padding: 15px; */
+    /* border-radius: 8px; */
+    width: max-content;
+    position: relative;
+  }
+  
+  /* Date Label - Positioned on top of the input border */
+  .date-label {
+    position: absolute;
+    top: -1px;
+    left: 12px;
+    /* background-color: '#2f5c98'; */
+    color: white;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 0 5px;
+  }
+  
+  /* Date Picker Container */
+  .date-range-container {
+    display: flex;
+    align-items: center;
+    border: 1px solid white;
+    border-radius: 6px;
+    padding: 8px;
+    width: 100%;
+    position: relative;
+    margin-top: 8px;
+  }
+  
+  /* Input Field */
+  .date-input {
+    background: transparent;
+    border: none;
+    color: white;
+    font-size: 14px;
+    width: 80px;
+    text-align: center;
+    outline: none;
+  }
+  
+  /* Separator between dates */
+  .separator {
+    color: white;
+    font-size: 14px;
+    margin: 0 5px;
+  }
+  
+  /* Calendar Icon */
+  .calendar-icon {
+    color: white;
+    font-size: 16px;
+    position: absolute;
+    right: 10px;
+    pointer-events: none;
+  }
+  
+  /* Last 7 Days Text */
+  .last-7-days {
+    color: white;
+    font-size: 14px;
+    margin-top: 5px;
+    font-weight: bold;
+  }
+  
+  /* Override react-datepicker styles */
+  .react-datepicker-wrapper {
+    width: auto;
+  }
+  
+  .react-datepicker__input-container input {
+    background: transparent;
+    border: none;
+    color: white;
+    font-size: 14px;
+    text-align: center;
+    outline: none;
+    width: 80px;
+  }
+  

@@ -1,23 +1,24 @@
-import logo from './logo.svg';
+import { useState } from 'react';
 import './App.css';
+import Button from './components/shared/Button/Button';
+import DataTable from './components/shared/DataTable/DataTable';
+import DateRangePicker from './components/shared/DateRangePicker/DateRangePicker';
+import ProfileCard from './components/shared/ProfileCard/ProfileCard';
+import Tab from './components/shared/Tab/Tab';
+import Dropdown from './components/shared/Dropdown/Dropdown';
+import MenuDrop from './components/shared/MenuDrop/MenuDrop';
+import Test from './Test';
+import Header from './components/Header/Header';
 
 function App() {
+
+
+
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Header />
+      {/* <Test /> */}
     </div>
   );
 }

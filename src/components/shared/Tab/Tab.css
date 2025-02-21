@@ -1,0 +1,78 @@
+/* Default styles */
+.tab-container {
+    display: flex;
+    /* justify-content: center; */
+    gap: 10px;
+    /* padding: 10px; */
+    /* border-radius: 30px; */
+    /* overflow-x: auto; Enables horizontal scrolling on smaller screens */
+    /* white-space: nowrap; */
+    transition: 0.3s ease-in-out;
+    width: max-content;
+overflow:  hidden;
+
+  }
+  
+  .tab-item {
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 500;
+    padding: 10px 16px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: 0.2s ease-in-out;
+  }
+
+  
+  /* Dark Variant */
+  .tab-container.dark {
+    background: #f5f3f9;
+    /* padding: 8px 12px; */
+    border-radius: 20px
+
+  }
+  
+  .tab-container.dark .tab-item {
+    color: #2D023D;
+    border-radius: 20px;
+
+  }
+  
+  .tab-container.dark .tab-item.active {
+    background: #2D023D;
+    color: #fff;
+  }
+  
+  /* Light Variant */
+  .tab-container.light {
+    background: #fff;
+    /* padding: 8px 12px; */
+    border: 1px solid #ddd;
+    border-radius: 10px
+
+  }
+  
+  .tab-container.light .tab-item {
+    color: #2D023D;
+  }
+  
+  .tab-container.light .tab-item.active {
+    background: #e5e0e7;
+    font-weight: bold;
+  }
+  
+  /* Mobile Responsiveness */
+  @media (max-width: 600px) {
+    .tab-container {
+      flex-wrap: nowrap;
+      overflow-x: auto;
+      padding: 6px;
+    }
+  
+    .tab-item {
+      font-size: 12px;
+      padding: 8px 12px;
+    }
+  }
+  

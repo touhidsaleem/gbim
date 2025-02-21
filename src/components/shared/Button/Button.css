@@ -1,0 +1,70 @@
+.custom-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    font-size: 16px;
+    font-weight: 600;
+    border: none;
+    border-radius: 50px;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  /* Variants */
+  .primary {
+    background-color: #4a90e2;
+    color: white;
+  }
+  
+  .success {
+    background-color: #7be694;
+    color: #25003b;
+  }
+  
+  .danger {
+    background-color: #e74c3c;
+    color: white;
+  }
+  
+  .outlined {
+    background-color: white;
+    border: 2px solid #4a90e2;
+    color: #4a90e2;
+  }
+  
+  .secondary {
+    background-color: #25003b;
+    color: white;
+  }
+  
+  /* Hover Effects */
+  .primary:hover {
+    background-color: #357acb;
+  }
+  
+  .success:hover {
+    background-color: #6adf83;
+  }
+  
+  .danger:hover {
+    background-color: #c0392b;
+  }
+  
+  .outlined:hover {
+    background-color: #4a90e2;
+    color: white;
+  }
+  
+  .secondary:hover {
+    background-color: #3d004c;
+  }
+  
+  /* Icon Styling */
+  .button-icon {
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+  }
+  
