@@ -19,7 +19,12 @@ import TitleBoard from './components/TitleBoard/TitleBoard';
 import LeftDoughnut from './components/shared/Doughnut/LeftDougnut';
 import Bars from './components/shared/Bars/Bars';
 import { Line } from 'react-chartjs-2';
+import Tab from './components/shared/Tab/Tab';
+import Button from './components/shared/Button/Button';
 // import { Bar, Doughnut, Line } from 'react-chartjs-2';
+
+
+import Logout from './assets/icons/logout.svg'
 
 const Dashboard = () => {
 
@@ -94,10 +99,19 @@ const Dashboard = () => {
         ],
     };
 
+    const tabs = [
+        { name: "Overview" },
+        { name: "Performance Monitoring" },
+        { name: "Indexing" },
+        { name: "Core Web Vitals" },
+        { name: "Site Health" },
+    ];
+
 
 
     return (
         <div className='dashboard-wrapper'>
+
             <div className='left-dashboard-content'>
                 <div className='menu-icons-wrapper'>
                     <i className={`ri-arrow-right-s-line chev-right`}></i>
@@ -118,12 +132,22 @@ const Dashboard = () => {
 
                 <TitleBoard />
 
+                <div className='tab-view-actions-wrapper'>
+                    <Tab variant="light" tabs={tabs} />
+                    <div className='right-actions-wrapper'>
+                        <Button text="Export" variant="outlined" iconClass="download-2-line" />
+                        <Button text="Share" variant="primary" iconClass="share-line" />
+                        <Button variant="danger" icon={<img src={Logout} alt='logout-btn' />} />
+                    </div>
 
-                {/* <Bars /> */}
+                </div>
+
+
+                <Bars />
 
 
                 {/* <Line data={lineData} /> */}
-                {/* <LeftDoughnut /> */}
+                <LeftDoughnut />
 
             </div>
 

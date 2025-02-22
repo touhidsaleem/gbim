@@ -2,7 +2,7 @@
 
 .board{
     /* width: 100%; */
-    /* height: 6rem; */
+    height: 6rem;
     background-image: linear-gradient(to right, #0A3956 , #41639C);
     border-radius: 16px;
     display: flex;

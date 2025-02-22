@@ -47,9 +47,9 @@ position: relative;
 
 .right-dashboard-content{
     width: 80%;
-    background-color: aqua;
-    max-width: 80%;
-    padding: 1em;
+    /* background-color: aqua; */
+    /* max-width: 80%; */
+    /* padding: 1em; */
 }
 
 .chev-right{
@@ -58,4 +58,22 @@ top: 1em;
 right: -0.5em;
 background-color: #DDE6E0;
 border-radius: 50%;
+}
+
+
+
+.tab-view-actions-wrapper{
+    display: flex;
+    max-height: 3rem;
+    justify-content: space-between;
+    align-items: center;
+    /* background-color: red; */
+    margin: 1em 0;
+
+}
+
+.right-actions-wrapper{
+    display: flex;
+    justify-content: center;
+    gap: 1em;
 }
