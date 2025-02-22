@@ -26,7 +26,7 @@ function Test() {
     return (
         <div className="Test" >
 
-            <h2>Dark Variant</h2>
+            {/* <h2>Dark Variant</h2>
             <Tab variant="dark" />
 
             <h2>Light Variant</h2>
@@ -55,9 +55,9 @@ function Test() {
 
             <div>
                 <Dropdown options={options} selected={selected} onChange={setSelected} />
-            </div>
+            </div> */}
 
-            {/* <MenuDrop title="SEO" items={seoItems} /> */}
+            <MenuDrop title="SEO" items={seoItems} />
 
         </div>
     );

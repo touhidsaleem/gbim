@@ -9,6 +9,7 @@ import Dropdown from './components/shared/Dropdown/Dropdown';
 import MenuDrop from './components/shared/MenuDrop/MenuDrop';
 import Test from './Test';
 import Header from './components/Header/Header';
+import Dashboard from './Dashboard';
 
 function App() {
 
@@ -18,6 +19,7 @@ function App() {
   return (
     <div className="App">
       <Header />
+      <Dashboard />
       {/* <Test /> */}
     </div>
   );

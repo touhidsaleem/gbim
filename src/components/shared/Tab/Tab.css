@@ -71,8 +71,8 @@ overflow:  hidden;
     }
   
     .tab-item {
-      font-size: 12px;
-      padding: 8px 12px;
+      font-size: '1rem';
+      /* padding: 8px 12px; */
     }
   }
   

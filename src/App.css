@@ -1,4 +1,7 @@
 
 .App{
-  /* background-color: yellow; */
+  width: '100%';
+  height: auto;
+  overflow-x: hidden;
+  background-color:  #F5F5F5;
 }

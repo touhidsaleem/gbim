@@ -2,17 +2,17 @@ import React, { useState } from "react";
 import "./MenuDrop.css";
 
 const MenuDrop = ({ title, items }) => {
-    const [isOpen, setIsOpen] = useState(false);
+    const [isOpen, setIsOpen] = useState(true);
 
     return (
-        <div className="dropdown">
-            <div className="dropdown-header" onClick={() => setIsOpen(!isOpen)}>
-                <span className="dropdown-title">{title}</span>
-                <i className={`ri-arrow-down-s-line ${isOpen ? "open" : ""}`}></i>
+        <div className="menu">
+            <div className="menu-header" onClick={() => setIsOpen(!isOpen)}>
+                <span className="menu-title">{title}</span>
+                <i className={`ri-arrow-down-s-line drop-icon ${isOpen ? "open" : ""}`}></i>
             </div>
-            <ul className={`dropdown-list ${isOpen ? "show" : ""}`}>
+            <ul className={`menu-list ${isOpen ? "show" : ""}`}>
                 {items.map((item, index) => (
-                    <li key={index} className="dropdown-item">
+                    <li key={index} className="menu-item">
                         {item}
                     </li>
                 ))}
