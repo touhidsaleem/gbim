@@ -49,6 +49,7 @@ position: relative;
     width: 80%;
     background-color: aqua;
     max-width: 80%;
+    padding: 1em;
 }
 
 .chev-right{
