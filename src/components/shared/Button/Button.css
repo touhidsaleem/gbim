@@ -3,17 +3,16 @@
   align-items: center;
   justify-content: center;
   gap: 6px;
-  font-size: 1em;  /* Default size */
+  font-size: 1em;  
   font-weight: 400;
   border: none;
   border-radius: 50px;
-  padding: 8px 18px;  /* Slightly reduced padding */
+  padding: 8px 18px;
   cursor: pointer;
   transition: all 0.3s ease;
   min-width: max-content;
 }
 
-/* Variants */
 .primary {
   background-color: #4a90e2;
   color: white;
@@ -28,7 +27,7 @@
   background-color: #e74c3c;
   color: white;
   border-radius: 100%;
-  padding: 8px; /* Reduced size */
+  padding: 8px; 
 }
 
 .outlined {
@@ -42,7 +41,6 @@
   color: white;
 }
 
-/* Hover Effects */
 .primary:hover {
   background-color: #357acb;
 }
@@ -64,19 +62,17 @@
   background-color: #3d004c;
 }
 
-/* Icon Styling */
 .button-icon {
-  font-size: 16px; /* Adjusted for better scaling */
+  font-size: 16px; 
   display: flex;
   align-items: center;
 }
 
-/* Responsive Styling */
 @media (max-width: 768px) {
   .custom-button {
-      font-size: 0.9em; /* Reduce font size */
-      padding: 6px 14px; /* Reduce padding */
-      gap: 4px; /* Reduce spacing between text and icon */
+      font-size: 0.9em; 
+      padding: 6px 14px;
+      gap: 4px; 
   }
 
   .danger{
@@ -84,17 +80,17 @@
   }
 
   .button-icon {
-      font-size: 14px; /* Reduce icon size */
+      font-size: 14px; 
   }
 }
 
 @media (max-width: 480px) {
   .custom-button {
-      font-size: 0.85em; /* Further reduce font size */
-      padding: 5px 12px; /* Further reduce padding */
+      font-size: 0.85em;
+      padding: 5px 12px;
   }
 
   .button-icon {
-      font-size: 12px; /* Adjust icon size */
+      font-size: 12px; 
   }
 }

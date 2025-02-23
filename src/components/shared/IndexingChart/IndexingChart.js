@@ -5,7 +5,6 @@ import annotationPlugin from "chartjs-plugin-annotation";
 import "./IndexingChart.css";
 import Dropdown from "../Dropdown/Dropdown";
 
-// ✅ Register the annotation plugin
 ChartJS.register(LineElement, PointElement, Tooltip, Legend, CategoryScale, LinearScale, annotationPlugin);
 
 const IndexingChart = () => {
@@ -18,7 +17,7 @@ const IndexingChart = () => {
         datasets: [
             {
                 label: "50 Pages Indexed",
-                data: [95, 100, 150, 110, 100, 105, 110, 85, 115, 105, 100, 95], // Matched values from UI
+                data: [95, 100, 150, 110, 100, 105, 110, 85, 115, 105, 100, 95],
                 borderColor: "#2D023D",
                 backgroundColor: "rgba(46, 12, 65, 0.5)",
                 tension: 0.4,
@@ -27,7 +26,7 @@ const IndexingChart = () => {
             },
             {
                 label: "0 Pages Indexed",
-                data: [90, 120, 160, 140, 105, 100, 105, 95, 110, 100, 90, 85], // Matched values from UI
+                data: [90, 120, 160, 140, 105, 100, 105, 95, 110, 100, 90, 85],
                 borderColor: "#597BE9",
                 backgroundColor: "rgba(98, 132, 255, 0.5)",
                 tension: 0.4,
@@ -56,7 +55,7 @@ const IndexingChart = () => {
                 annotations: {
                     line1: {
                         type: "line",
-                        xMin: 4.5, // Red dotted vertical line in May
+                        xMin: 4.5,
                         xMax: 4.5,
                         borderColor: "red",
                         borderWidth: 2,

@@ -7,20 +7,17 @@ const DateRangePicker = () => {
     const [startDate, setStartDate] = useState(new Date());
     const [endDate, setEndDate] = useState(new Date());
 
-    // Calculate the number of days
     const calculateDays = () => {
         const difference = Math.ceil((endDate - startDate) / (1000 * 60 * 60 * 24));
-        return difference > 0 ? difference : 1; // Avoid negative or zero values
+        return difference > 0 ? difference : 1;
     };
 
     return (
         <div className="date-picker-wrapper">
-            {/* Label Positioned Above the Border */}
             <div className="date-label">
                 <p>Date</p>
             </div>
 
-            {/* Date Range Selection */}
             <div className="date-range-container">
                 <DatePicker
                     selected={startDate}
@@ -35,10 +32,8 @@ const DateRangePicker = () => {
                     className="date-input"
                     dateFormat="MM/dd/yy"
                 />
-                {/* <i class="ri-calendar-event-line"></i> */}
             </div>
 
-            {/* Display Selected Days Count */}
             <p className="last-7-days">Last {calculateDays()} Days</p>
         </div>
     );

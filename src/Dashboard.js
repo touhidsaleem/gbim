@@ -60,51 +60,6 @@ const Dashboard = () => {
         },
     ]
 
-
-    const barData = {
-        labels: ["Jan 25", "Feb 25", "Mar 25", "Apr 25", "May 25", "Jun 25", "Jul 25", "Aug 25", "Sep 25", "Oct 25", "Nov 25", "Dec 25"],
-        datasets: [
-            {
-                label: "Clicks",
-                data: [100, 140, 160, 180, 200, 180, 170, 175, 165, 155, 150, 160],
-                backgroundColor: "#325789",
-            },
-        ],
-    };
-
-    const doughnutData = {
-        labels: ["www.abc.com/services", "www.abc.com/home", "www.demo.com/home"],
-        datasets: [
-            {
-                data: [600, 800, 500],
-                backgroundColor: ["#5CD3A8", "#FFC85C", "#FE6B6B"],
-            },
-        ],
-    };
-
-    const doughnutDataNegative = {
-        labels: ["www.abc.com/services", "www.abc.com/services", "www.demo.com/home"],
-        datasets: [
-            {
-                data: [4, 2, 1],
-                backgroundColor: ["#FE6B6B", "#FFA07A", "#FF6347"],
-            },
-        ],
-    };
-
-    const lineData = {
-        labels: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
-        datasets: [
-            {
-                label: "Pages Indexed",
-                data: [120, 140, 160, 190, 150, 170, 130, 180, 160, 150, 140, 135],
-                borderColor: "#2D60FF",
-                backgroundColor: "rgba(45, 96, 255, 0.2)",
-                fill: true,
-            },
-        ],
-    };
-
     const tabs = [
         { name: "Overview" },
         { name: "Performance Monitoring" },

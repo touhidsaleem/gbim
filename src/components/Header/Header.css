@@ -11,7 +11,6 @@
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-/* Wrapper */
 .header-wrapper {
     width: 95%;
     display: flex;
@@ -19,17 +18,16 @@
     align-items: center;
     margin: 0 auto;
     /* padding: 0 1rem; */
-    flex-wrap: wrap; /* Allows wrapping */
+    flex-wrap: wrap;
     gap: 1em;
 }
 
-/* Left Side - Logo & Tabs */
 .header-left {
     display: flex;
     align-items: center;
     gap: 1rem;
     flex: 1;
-    min-width: 0; /* Prevents it from taking extra space */
+    min-width: 0; 
 }
 
 /* Logo */
@@ -38,29 +36,26 @@
     min-width: 6rem;
 }
 
-/* Tabs - Make them scrollable */
 .header-tabs-container {
     flex: 1;
-    overflow-x: auto; /* Allows scrolling */
+    overflow-x: auto;
     white-space: nowrap;
-    scrollbar-width: none; /* Hides scrollbar */
-    -ms-overflow-style: none; /* Hides scrollbar in IE */
+    scrollbar-width: none; 
+    -ms-overflow-style: none; 
 }
 
 .header-tabs-container::-webkit-scrollbar {
-    display: none; /* Hides scrollbar in Chrome */
+    display: none; 
 }
 
-/* Right Side - Button & Profile */
 .header-right {
     display: flex;
     align-items: center;
     gap: 1rem;
-    flex-shrink: 0; /* Prevents shrinking */
+    flex-shrink: 0; 
     white-space: nowrap;
 }
 
-/* Responsive Design */
 @media (max-width: 768px) {
     .header-wrapper {
         flex-direction: column;

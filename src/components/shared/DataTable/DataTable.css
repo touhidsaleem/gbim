@@ -48,7 +48,6 @@
     background-color: #f9f9f9;
   }
   
-  /* Responsive Design */
   @media (max-width: 768px) {
     .custom-table th,
     .custom-table td {
@@ -61,14 +60,12 @@
     }
   }
   
-/* Tooltip Wrapper */
 .info-icon-wrapper {
     position: relative;
     display: inline-block;
     cursor: pointer;
 }
 
-/* Tooltip Styling */
 .tooltip {
     position: absolute;
     bottom: -30px;
@@ -85,7 +82,6 @@
     z-index: 10;
 }
 
-/* Hide Tooltip Initially */
 .info-icon-wrapper:hover .tooltip {
     opacity: 1;
 }

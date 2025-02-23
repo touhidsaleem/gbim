@@ -25,10 +25,9 @@
     font-weight: 600;
 }
 
-/* Responsive Design */
 @media (max-width: 768px) {
     .board {
-        flex-direction: column; /* Stack elements on top of each other */
+        flex-direction: column;
         height: auto;
         padding: 1em;
         gap: 15px;

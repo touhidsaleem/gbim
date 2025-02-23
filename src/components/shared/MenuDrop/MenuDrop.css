@@ -33,7 +33,7 @@
 }
 
 .menu-list.show {
-  max-height: 200px; /* Adjust based on content */
+  max-height: 200px; 
   opacity: 1;
 }
 

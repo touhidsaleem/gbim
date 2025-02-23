@@ -14,18 +14,18 @@
 }
 
 .chart-title {
-    font-size: 1.125rem; /* Equivalent to text-lg */
+    font-size: 1.125rem; 
     font-weight: 600;
     margin-bottom: 0;
 }
 
 .chart-stat {
-    font-size: 1.875rem; /* Equivalent to text-3xl */
+    font-size: 1.875rem; 
     font-weight: bold;
 }
 
 .chart-increase {
-    color: #10B981; /* Equivalent to Tailwind's text-green-500 */
+    color: #10B981;
     font-size: 1.125rem;
 }
 

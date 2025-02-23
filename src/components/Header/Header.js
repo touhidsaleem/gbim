@@ -17,7 +17,6 @@ const Header = () => {
         <header className="header">
             <div className="header-wrapper">
 
-                {/* Left Side - Logo & Tabs */}
                 <div className="header-left">
                     <img
                         src="https://www.dmcockpit.com/_next/image?url=%2Fimages%2Fdark-logo.png&w=640&q=75"
@@ -29,7 +28,6 @@ const Header = () => {
                     </div>
                 </div>
 
-                {/* Right Side - Button & Profile */}
                 <div className="header-right">
                     <Button text="My Plan" variant="success" iconClass="vip-crown-fill" />
                     <ProfileCard name="John Doe" role="Project Manager" avatar={null} />

@@ -4,7 +4,7 @@ import "./DataTable.css";
 const DataTable = ({ title, data }) => {
     const [tooltipVisible, setTooltipVisible] = useState(false);
 
-    if (!data.length) return null; // Handle empty data
+    if (!data.length) return null;
 
     return (
         <div className="table-container">

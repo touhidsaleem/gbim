@@ -1,7 +1,7 @@
 import React from "react";
 import { Doughnut } from "react-chartjs-2";
 import { Chart as ChartJS, ArcElement, Tooltip, Legend } from "chart.js";
-import "./LeftDoughnut.css"; // Import the CSS file
+import "./LeftDoughnut.css";
 import Button from "../Button/Button";
 
 ChartJS.register(ArcElement, Tooltip, Legend);
