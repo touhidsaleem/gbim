@@ -2,6 +2,8 @@ import React from "react";
 import "./DataTable.css";
 
 const DataTable = ({ title, data }) => {
+    if (!data.length) return null; // Handle empty data
+
     return (
         <div className="table-container">
             <h3 className="table-title">
@@ -11,17 +13,17 @@ const DataTable = ({ title, data }) => {
                 <table className="custom-table">
                     <thead>
                         <tr>
-                            <th>TYPE</th>
-                            <th>VALID</th>
-                            <th>INVALID</th>
+                            {Object.keys(data[0]).map((key, index) => (
+                                <th key={index}>{key.toUpperCase()}</th>
+                            ))}
                         </tr>
                     </thead>
                     <tbody>
-                        {data.map((row, index) => (
-                            <tr key={index}>
-                                <td>{row.type}</td>
-                                <td>{row.valid}</td>
-                                <td>{row.invalid}</td>
+                        {data.map((row, rowIndex) => (
+                            <tr key={rowIndex}>
+                                {Object.values(row).map((value, colIndex) => (
+                                    <td key={colIndex}>{value}</td>
+                                ))}
                             </tr>
                         ))}
                     </tbody>

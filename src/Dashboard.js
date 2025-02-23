@@ -25,6 +25,9 @@ import Button from './components/shared/Button/Button';
 
 
 import Logout from './assets/icons/logout.svg'
+import RightDoughnut from './components/shared/Doughnut/RightDoughnut';
+import DataTable from './components/shared/DataTable/DataTable';
+import IndexingChart from './components/shared/IndexingChart/IndexingChart';
 
 const Dashboard = () => {
 
@@ -107,6 +110,26 @@ const Dashboard = () => {
         { name: "Site Health" },
     ];
 
+    const tableData = {
+        "Improvements in Website": [
+            { type: "Breadcrumbs", valid: 77, invalid: 0 },
+            { type: "FAQ", valid: 4, invalid: 0 },
+            { type: "Review Snippet", valid: 33, invalid: 0 },
+            { type: "Sitelink Checkbox", valid: 40, invalid: 0 }
+        ],
+        "Top Opportunity Keywords": [
+            { keyword: "Dog Food", impressions: "30k", clicks: "20,133", ctr: "12%" },
+            { keyword: "Cat Food", impressions: "20k", clicks: "30,000", ctr: "15%" },
+            { keyword: "Bird Food", impressions: "5k", clicks: "35,135", ctr: "20%" }
+        ],
+        "Slow-Growth Opportunity Keyword": [
+            { keyword: "Food", impressions: 100, clicks: 1, ctr: "2%" },
+            { keyword: "Rabbit Food", impressions: 150, clicks: 2, ctr: "3%" },
+            { keyword: "Bird Food", impressions: 120, clicks: 3, ctr: "4%" }
+        ]
+    };
+
+
 
 
     return (
@@ -147,7 +170,19 @@ const Dashboard = () => {
 
 
                 {/* <Line data={lineData} /> */}
-                <LeftDoughnut />
+                <div className='doughnut-wrapper'>
+
+                    <LeftDoughnut />
+                    <RightDoughnut />
+                </div>
+
+                <IndexingChart />
+
+                <div className='table-wrapper'>
+                    {Object.entries(tableData).map(([title, data], index) => (
+                        <DataTable key={index} title={title} data={data} />
+                    ))}
+                </div>
 
             </div>
 

@@ -1,11 +1,16 @@
-import React from "react";
+import React, { useState } from "react";
 import { Bar } from "react-chartjs-2";
 import { Chart as ChartJS, CategoryScale, LinearScale, BarElement, Title, Tooltip, Legend } from "chart.js";
 import "./Bars.css";
+import Dropdown from "../Dropdown/Dropdown";
 
 ChartJS.register(CategoryScale, LinearScale, BarElement, Title, Tooltip, Legend);
 
 const Bars = () => {
+
+    const selectOptions = ["Daily", "Weekly", "Monthly", "Yearly"];
+    const [selected, setSelected] = useState("Monthly");
+
     const data = {
         labels: [
             "Jan 25", "Feb 25", "Mar 25", "Apr 25", "May 25", "Jun 25",
@@ -16,7 +21,7 @@ const Bars = () => {
                 data: [150, 120, 110, 160, 170, 130, 125, 140, 100, 175, 125, 135],
                 backgroundColor: "#1F3B66",
                 borderRadius: 5,
-                barThickness: 20,
+                barThickness: 10,
             }
         ]
     };
@@ -42,12 +47,19 @@ const Bars = () => {
 
     return (
         <div className="bar-chart-container">
-            <h2 className="chart-title">Total Website Clicks</h2>
+            <div className="bar-title-wrapper">
+                <h2 className="chart-title">Total Website Clicks</h2>
+                <Dropdown options={selectOptions} selected={selected} onChange={setSelected} />
+            </div>
+
             <p className="chart-stat">
                 398 <span className="chart-increase">↑ 39%</span>
             </p>
             <div className="chart-wrapper">
-                <Bar data={data} options={options} />
+                <p className="click-label">Clicks</p>
+                <div className="bar-wrapper">
+                    <Bar data={data} options={options} />
+                </div>
             </div>
         </div>
     );

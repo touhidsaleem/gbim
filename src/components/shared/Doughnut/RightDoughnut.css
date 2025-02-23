@@ -1,4 +1,4 @@
-.left-pie-container {
+.right-pie-container {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -11,13 +11,13 @@
     padding: 1em;
 }
 
-.left-pie-title {
+.right-pie-title {
     font-size: 1.125rem; 
     font-weight: 600;
     margin: 0 6px 0 0;
 }
 
-.left-pie-chart {
+.right-pie-chart {
     /* position: relative; */
     /* width: 200px; */
     height: 20em;
@@ -30,7 +30,7 @@
 }
 
 
-.left-pie-button:hover {
+.right-pie-button:hover {
     background: #2a1240;
 }
 
@@ -40,3 +40,5 @@
     align-items: center;
     width: 100%;
 }
+
+

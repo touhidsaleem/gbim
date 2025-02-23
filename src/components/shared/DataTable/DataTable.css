@@ -7,17 +7,19 @@
   }
   
   .table-title {
-    font-size: 18px;
+    font-size: 1.1em;
     font-weight: bold;
     display: flex;
     align-items: center;
     gap: 5px;
     color: #333;
-    margin-bottom: 12px;
+    /* margin-bottom: 12px; */
+    padding: 1em;
+    margin: 0;
   }
   
   .ri-information-line {
-    font-size: 16px;
+    font-size: 1em;
     color: gray;
   }
   
@@ -37,7 +39,7 @@
   
   .custom-table th,
   .custom-table td {
-    padding: 10px;
+    padding: 0.6em;
     text-align: left;
   }
   

@@ -1,17 +1,17 @@
 import React from "react";
 import { Doughnut } from "react-chartjs-2";
 import { Chart as ChartJS, ArcElement, Tooltip, Legend } from "chart.js";
-import "./LeftDoughnut.css"; // Import the CSS file
+import "./RightDoughnut.css"; // Import the CSS file
 import Button from "../Button/Button";
 
 ChartJS.register(ArcElement, Tooltip, Legend);
 
-const LeftDoughnut = () => {
+const RightDoughnut = () => {
     const data = {
         datasets: [
             {
-                data: [600, 500, 200, 700, 600],
-                backgroundColor: ["#94CFC1", "#FFE6D1", "#E59294", "#C5D5E0", "#E0D7C5"],
+                data: [600, 500, 100, 300, 400],
+                backgroundColor: ["#C23A22", "#FF6663", "#FDAAAA", "#E54C38", "#F8858B"],
                 borderColor: "#ffffff",
                 // borderWidth: 2,
                 borderRadius: 10,
@@ -47,19 +47,19 @@ const LeftDoughnut = () => {
     };
 
     return (
-        <div className="left-pie-container">
+        <div className="right-pie-container">
             <div className="title-cta-wrapper">
                 <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
-                    <h2 className="left-pie-title">Best Performing Pages</h2>
+                    <h2 className="right-pie-title">Under Performing Pages</h2>
                     <i class="ri-information-line"></i>
                 </div>
                 <Button variant="secondary" text='View more' />
             </div>
-            <div className="left-pie-chart">
+            <div className="right-pie-chart">
                 <Doughnut data={data} options={options} />
             </div>
         </div>
     );
 };
 
-export default LeftDoughnut;
+export default RightDoughnut;
