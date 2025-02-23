@@ -1,78 +1,75 @@
 /* Default styles */
 .tab-container {
-    display: flex;
-    /* justify-content: center; */
-    gap: 10px;
-    /* padding: 10px; */
-    /* border-radius: 30px; */
-    /* overflow-x: auto; Enables horizontal scrolling on smaller screens */
-    /* white-space: nowrap; */
-    transition: 0.3s ease-in-out;
-    width: max-content;
-overflow:  hidden;
+  display: flex;
+  gap: 10px;
+  transition: 0.3s ease-in-out;
+  width: max-content;
+  overflow-x: auto;
+  white-space: nowrap;
+  /* padding: 8px 10px; */
+}
 
-  }
-  
-  .tab-item {
-    cursor: pointer;
-    font-size: 14px;
-    font-weight: 500;
-    padding: 10px 16px;
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    transition: 0.2s ease-in-out;
-  }
+/* Hide scrollbar in WebKit browsers */
+.tab-container::-webkit-scrollbar {
+  display: none;
+}
 
-  
-  /* Dark Variant */
-  .tab-container.dark {
-    background: #f5f3f9;
-    /* padding: 8px 12px; */
-    border-radius: 20px
+.tab-item {
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 500;
+  padding: 10px 16px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: 0.2s ease-in-out;
+  flex: 0 0 auto; /* Prevents shrinking */
+}
 
-  }
-  
-  .tab-container.dark .tab-item {
-    color: #2D023D;
-    border-radius: 20px;
+/* Dark Variant */
+.tab-container.dark {
+  background: #f5f3f9;
+  border-radius: 20px;
+}
 
-  }
-  
-  .tab-container.dark .tab-item.active {
-    background: #2D023D;
-    color: #fff;
-  }
-  
-  /* Light Variant */
-  .tab-container.light {
-    background: #fff;
-    /* padding: 8px 12px; */
-    border: 1px solid #ddd;
-    border-radius: 10px
+.tab-container.dark .tab-item {
+  color: #2D023D;
+  border-radius: 20px;
+}
 
-  }
-  
-  .tab-container.light .tab-item {
-    color: #2D023D;
-  }
-  
-  .tab-container.light .tab-item.active {
-    background: #e5e0e7;
-    font-weight: bold;
-  }
-  
-  /* Mobile Responsiveness */
-  @media (max-width: 600px) {
-    .tab-container {
-      flex-wrap: nowrap;
+.tab-container.dark .tab-item.active {
+  background: #2D023D;
+  color: #fff;
+}
+
+/* Light Variant */
+.tab-container.light {
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+}
+
+.tab-container.light .tab-item {
+  color: #2D023D;
+}
+
+.tab-container.light .tab-item.active {
+  background: #e5e0e7;
+  font-weight: bold;
+}
+
+/* ✅ Mobile Responsiveness - Perfect Fix */
+@media (max-width: 768px) {
+  .tab-container {
+      width: 100%;
+      display: flex;
       overflow-x: auto;
-      padding: 6px;
-    }
-  
-    .tab-item {
-      font-size: '1rem';
-      /* padding: 8px 12px; */
-    }
+      scroll-behavior: smooth;
+      gap: 5px;
   }
-  
+
+  .tab-item {
+      font-size: 13px;
+      padding: 8px 10px;
+  }
+}

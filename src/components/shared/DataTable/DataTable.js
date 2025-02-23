@@ -1,15 +1,27 @@
-import React from "react";
+import React, { useState } from "react";
 import "./DataTable.css";
 
 const DataTable = ({ title, data }) => {
+    const [tooltipVisible, setTooltipVisible] = useState(false);
+
     if (!data.length) return null; // Handle empty data
 
     return (
         <div className="table-container">
             <h3 className="table-title">
-                {title} <i className="ri-information-line"></i>
+                {title}
+                <div
+                    className="info-icon-wrapper"
+                    onMouseEnter={() => setTooltipVisible(true)}
+                    onMouseLeave={() => setTooltipVisible(false)}
+                >
+                    <i className="ri-information-line"></i>
+                    {tooltipVisible && (
+                        <div className="tooltip">This table shows the {title} data.</div>
+                    )}
+                </div>
             </h3>
-            <div className="table-wrapper">
+            <div className="data-table-wrapper">
                 <table className="custom-table">
                     <thead>
                         <tr>

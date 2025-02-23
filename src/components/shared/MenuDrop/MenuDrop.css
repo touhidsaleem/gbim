@@ -12,6 +12,7 @@
 .drop-icon {
   color: #828282;
   transition: transform 0.3s ease;
+
 }
 
 .drop-icon.open {

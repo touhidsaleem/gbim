@@ -16,7 +16,7 @@
 .chart-title {
     font-size: 1.125rem; /* Equivalent to text-lg */
     font-weight: 600;
-    margin-bottom: 8px;
+    margin-bottom: 0;
 }
 
 .chart-stat {

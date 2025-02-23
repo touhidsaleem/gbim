@@ -24,3 +24,45 @@
     width: 1em;
     font-weight: 600;
 }
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .board {
+        flex-direction: column; /* Stack elements on top of each other */
+        height: auto;
+        padding: 1em;
+        gap: 15px;
+        text-align: center;
+    }
+
+    .google-search {
+        font-size: 1.2em;
+    }
+
+    .logo-img {
+        width: 7em;
+    }
+
+    .setting-icon {
+        width: 1em;
+    }
+}
+
+@media (max-width: 480px) {
+    .board {
+        padding: 0.8em;
+        border-radius: 12px;
+    }
+
+    .google-search {
+        font-size: 1em;
+    }
+
+    .logo-img {
+        width: 6em;
+    }
+
+    .setting-icon {
+        width: 0.9em;
+    }
+}

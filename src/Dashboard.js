@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './Dashboard.css';
 import FourSqaure from './assets/icons/four-squares.svg';
 import Adsense from './assets/icons/adsense.svg';
@@ -31,7 +31,10 @@ import IndexingChart from './components/shared/IndexingChart/IndexingChart';
 
 const Dashboard = () => {
 
+    const [dropWrapperClose, setDropWrapperClose] = useState(false)
+
     const iconsArr = [Search, FourSqaure, StarBars, Seo, Adsense, Meta, BarImage, ContentSearch, SocialMedia, Analytics, Attach, Wallet, Robot, PowerOff]
+
 
 
     const menuLinks = [
@@ -135,20 +138,33 @@ const Dashboard = () => {
     return (
         <div className='dashboard-wrapper'>
 
+
             <div className='left-dashboard-content'>
+
                 <div className='menu-icons-wrapper'>
-                    <i className={`ri-arrow-right-s-line chev-right`}></i>
+                    <div className='chev-right-wrapper'>
+                        <i className={`ri-arrow-right-s-line chev-right`}></i>
+                    </div>
                     {iconsArr?.map((data) =>
                         <img src={data} alt='menu-icon' className='menu-icon' />
                     )}
                 </div>
-                <div className='menu-drop-wrapper'>
-                    <i className={`ri-arrow-right-s-line chev-right`}></i>
-                    {menuLinks?.map((item) =>
-                        <MenuDrop title={item?.title} items={item?.links} />
-                    )}
 
+                <div className={`menu-drop-wrapper ${dropWrapperClose ? 'close' : ''}`} >
+                    <div className='chev-right-wrapper' onClick={() => setDropWrapperClose(!dropWrapperClose)}>
+                        <i className={`ri-arrow-right-s-line chev-right ${!dropWrapperClose ? 'iconOpen' : ''}`}></i>
+                    </div>
+                    {!dropWrapperClose &&
+                        <div>
+                            {menuLinks?.map((item) =>
+                                <MenuDrop title={item?.title} items={item?.links} />
+                            )}
+                        </div>
+                    }
+
+                    {dropWrapperClose && <div className='dummy-link-text'>Menu Links Here</div>}
                 </div>
+
             </div>
 
             <div className='right-dashboard-content'>
@@ -168,10 +184,7 @@ const Dashboard = () => {
 
                 <Bars />
 
-
-                {/* <Line data={lineData} /> */}
                 <div className='doughnut-wrapper'>
-
                     <LeftDoughnut />
                     <RightDoughnut />
                 </div>

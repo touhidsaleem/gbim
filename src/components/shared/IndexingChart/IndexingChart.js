@@ -19,7 +19,7 @@ const IndexingChart = () => {
             {
                 label: "50 Pages Indexed",
                 data: [95, 100, 150, 110, 100, 105, 110, 85, 115, 105, 100, 95], // Matched values from UI
-                borderColor: "#2E0C41",
+                borderColor: "#2D023D",
                 backgroundColor: "rgba(46, 12, 65, 0.5)",
                 tension: 0.4,
                 borderWidth: 2,
@@ -28,7 +28,7 @@ const IndexingChart = () => {
             {
                 label: "0 Pages Indexed",
                 data: [90, 120, 160, 140, 105, 100, 105, 95, 110, 100, 90, 85], // Matched values from UI
-                borderColor: "#6284FF",
+                borderColor: "#597BE9",
                 backgroundColor: "rgba(98, 132, 255, 0.5)",
                 tension: 0.4,
                 borderWidth: 2,
@@ -42,14 +42,15 @@ const IndexingChart = () => {
         maintainAspectRatio: false,
         plugins: {
             legend: {
-                position: "top",
-                align: "start",
-                labels: {
-                    color: "#333",
-                    usePointStyle: true,
-                    pointStyle: "circle",
-                    padding: 15,
-                },
+                // position: "top",
+                // align: "start",
+                // labels: {
+                //     color: "#333",
+                //     usePointStyle: true,
+                //     pointStyle: "circle",
+                //     padding: 15,
+                // },
+                display: false
             },
             annotation: {
                 annotations: {
@@ -94,6 +95,18 @@ const IndexingChart = () => {
                 <Dropdown options={selectOptions} selected={selected} onChange={setSelected} />
 
             </div>
+
+            <div className="custom-legend">
+                <div className="legend-item">
+                    <span className="legend-circle" style={{ backgroundColor: "#2D023D" }}></span>
+                    50 Pages Indexed
+                </div>
+                <div className="legend-item">
+                    <span className="legend-circle" style={{ backgroundColor: "#597BE9" }}></span>
+                    0 Pages Indexed
+                </div>
+            </div>
+
             <div className="chart-wrapper">
                 <Line data={data} options={options} />
             </div>

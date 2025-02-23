@@ -8,31 +8,72 @@
     top: 0;
     left: 0;
     z-index: 10;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-.header-wrapper{
-    /* padding: 0 2em */
-width: 95%;
-display: flex; 
-justify-content: space-between; 
-align-items: center; 
-margin: 0 auto;
-
-}
-
-.header-first-div {
+/* Wrapper */
+.header-wrapper {
+    width: 95%;
     display: flex;
-     align-items: center; 
-     gap: 1.5rem;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+    /* padding: 0 1rem; */
+    flex-wrap: wrap; /* Allows wrapping */
+    gap: 1em;
 }
 
-.header-logo{
-    width: 9rem
-}
-
-.header-second-div{
+/* Left Side - Logo & Tabs */
+.header-left {
     display: flex;
     align-items: center;
-    gap: 1.5em;
+    gap: 1rem;
+    flex: 1;
+    min-width: 0; /* Prevents it from taking extra space */
 }
 
+/* Logo */
+.header-logo {
+    width: 9rem;
+    min-width: 6rem;
+}
+
+/* Tabs - Make them scrollable */
+.header-tabs-container {
+    flex: 1;
+    overflow-x: auto; /* Allows scrolling */
+    white-space: nowrap;
+    scrollbar-width: none; /* Hides scrollbar */
+    -ms-overflow-style: none; /* Hides scrollbar in IE */
+}
+
+.header-tabs-container::-webkit-scrollbar {
+    display: none; /* Hides scrollbar in Chrome */
+}
+
+/* Right Side - Button & Profile */
+.header-right {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    flex-shrink: 0; /* Prevents shrinking */
+    white-space: nowrap;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .header-wrapper {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    .header-left, .header-right {
+        justify-content: center;
+        width: 100%;
+    }
+
+    .header-tabs-container {
+        width: 100%;
+        justify-content: center;
+    }
+}

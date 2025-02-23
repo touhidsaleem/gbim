@@ -12,22 +12,29 @@ const Header = () => {
         { name: "Website Audit", icon: "🖥️" },
         { name: "DM Captain Enterprise", icon: "📄" },
     ];
+
     return (
         <header className="header">
             <div className="header-wrapper">
-                <div className="header-first-div">
+
+                {/* Left Side - Logo & Tabs */}
+                <div className="header-left">
                     <img
                         src="https://www.dmcockpit.com/_next/image?url=%2Fimages%2Fdark-logo.png&w=640&q=75"
                         alt="logo"
                         className="header-logo"
                     />
-                    <Tab variant="dark" tabs={tabs} />
+                    <div className="header-tabs-container">
+                        <Tab variant="dark" tabs={tabs} />
+                    </div>
                 </div>
 
-                <div className="header-second-div" >
+                {/* Right Side - Button & Profile */}
+                <div className="header-right">
                     <Button text="My Plan" variant="success" iconClass="vip-crown-fill" />
                     <ProfileCard name="John Doe" role="Project Manager" avatar={null} />
                 </div>
+
             </div>
         </header>
     );
