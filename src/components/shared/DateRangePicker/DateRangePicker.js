@@ -16,7 +16,9 @@ const DateRangePicker = () => {
     return (
         <div className="date-picker-wrapper">
             {/* Label Positioned Above the Border */}
-            <label className="date-label">Date</label>
+            <div className="date-label">
+                <p>Date</p>
+            </div>
 
             {/* Date Range Selection */}
             <div className="date-range-container">

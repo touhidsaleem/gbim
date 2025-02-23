@@ -9,15 +9,43 @@
     gap: 1em;
 }
 
+@media screen and (max-width: 768px) {
+.dashboard-wrapper{
+    flex-direction: column;
+}
+    .left-dashboard-content{
+        max-width: 100%;
+    }
+    .menu-icons-wrapper{
+        width: 10%;
+    }
+    .menu-drop-wrapper{
+        width: 90vw
+    }
+
+    .drop-menu-wrap{
+        display: flex;
+        flex-wrap: wrap;
+        gap: 2em
+    }
+}
+
 .left-dashboard-content {
     /* width: 20%; */
     /* max-width: 20%; */
-    max-width: 20%;
     display: flex;
     gap: 1em;
     height: max-content;
 
 }
+
+@media screen and (min-width: 768px) {
+    .left-dashboard-content{
+        max-width: 20%;
+
+    }
+}
+
 
 .menu-icons-wrapper {
     border-radius: 8px;
@@ -143,3 +171,4 @@ width: 0;
     font-size: 0.8em;
     color: #b3aeae;
 }
+

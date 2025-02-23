@@ -155,7 +155,7 @@ const Dashboard = () => {
                         <i className={`ri-arrow-right-s-line chev-right ${!dropWrapperClose ? 'iconOpen' : ''}`}></i>
                     </div>
                     {!dropWrapperClose &&
-                        <div>
+                        <div className='drop-menu-wrap'>
                             {menuLinks?.map((item) =>
                                 <MenuDrop title={item?.title} items={item?.links} />
                             )}

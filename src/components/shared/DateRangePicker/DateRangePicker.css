@@ -13,11 +13,12 @@
     position: absolute;
     top: -1px;
     left: 12px;
-    background-color: '#2f5c98';
+    background-color: #365B8E;
     color: white;
     font-size: 12px;
     font-weight: bold;
     padding: 0 5px;
+    z-index: 9;
   }
   
   /* Date Picker Container */
